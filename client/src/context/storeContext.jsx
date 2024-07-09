@@ -1,17 +1,22 @@
-import { createContext, useEffect, useState } from 'react';
-import axios from 'axios';
+// src/context/storeContext.jsx
 
+import React, { createContext, useEffect, useState } from 'react';
+ 
+import { doctor_list} from "../assets/assets";
 export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
-  
-  const url = 'http://localhost:5000/';
   const [token, setToken] = useState('false');
-   
+  const [doctors, setDoctors] = useState([]);
+
+  useEffect(() => {
+    setDoctors(doctor_list);
+  }, []);
+
   const contextValue = {
-    url,
     token,
     setToken,
+    doctors,
   };
 
   return (
@@ -20,9 +25,5 @@ const StoreContextProvider = (props) => {
     </StoreContext.Provider>
   );
 };
-//export default have to do  for providing storecontextprovider
+
 export default StoreContextProvider;
-
-
-
- 

@@ -1,18 +1,17 @@
 import React from 'react'
 import './Home.css'
-import { assets } from '../../assets/assets'
+import Header from '../Header/Header'
+import About from '../About/About'
+import Count from '../Count/Count'
+import Contact from '../Contact/Contact'
+ 
 const Home = () => {
   return (
-    <div className="home">
-        <div className="left">
-             <h2>Your Health,
-             Our Responsibility </h2>
-            
-             <p>"Welcome to Health-APP, where your well-being is our top priority. Easily book appointments with top doctors at your convenience. Our platform ensures seamless scheduling and timely notifications, connecting you with expert care effortlessly. Trust Health-APP for a healthier, happier you."</p>
-        </div>
-        <div className="right">
-           <img src={assets.h1} alt="" />
-        </div>  
+    <div>
+       <Header/>
+       <About/>
+       <Count/>
+        <Contact/>
     </div>
   )
 }

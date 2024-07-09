@@ -1,0 +1,76 @@
+.contact-us-container {
+    padding: 50px 200px;
+    margin: 200px auto;
+    text-align: center;
+  }
+  .contact-us-container h2{
+    font-size: 50px;
+    font-size: 600;
+    color: rgb(65, 62, 62);
+    margin-bottom: 20px;
+  } 
+  .contact-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-us input {
+    margin: 20px 20px;
+    width: 50%;
+    padding: 10px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle box shadow */
+    border-radius: 5px; /* Optional: Adds rounded corners */
+    outline: none; /* Removes default outline */
+    transition: box-shadow 0.3s ease; /* Smooth transition for box shadow */
+    background-color: #edf3f0;
+  }
+  
+  .contact-us input:focus {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Stronger box shadow on focus */
+  }
+  
+  
+  .contact-us textarea {
+    margin: 20px 20px;
+    width: 50%;
+    padding: 10px;
+    height: 150px;
+    box-sizing: border-box; /* Ensures padding is included in width */
+    resize: none; /* Prevents resizing */
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle box shadow */
+    border-radius: 5px; /* Optional: Adds rounded corners */
+    outline: none; /* Removes default outline */
+    transition: box-shadow 0.3s ease; /* Smooth transition for box shadow */
+    background-color: #edf3f0;
+  }
+  
+  .contact-us textarea:focus {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Stronger box shadow on focus */
+  }
+
+  .contact-us button {
+    margin: 20px 20px;
+    width: 50%;
+    padding: 5px 10px;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: #edf3f0;
+    color: grey;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle box shadow */
+    border-radius: 5px; /* Optional: Adds rounded corners */
+    outline: none; /* Removes default outline */
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .contact-us button:focus {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Stronger box shadow on focus */
+  }
+
+  .contact-us button:hover{
+      background-color: rgb(166, 209, 166);
+  }

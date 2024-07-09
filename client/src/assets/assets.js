@@ -63,6 +63,17 @@ import  logo1 from './logo1.png'
 import logo2 from './logo2.jpeg'
 import logo4 from './logo4.png'
 import h1 from './hd.jpg'
+import d3 from './d3.avif'
+import doc1 from './doc1.jpeg';
+import doc2 from './doc2.jpeg';
+import doc3 from './doc3.jpeg';
+import doc4 from './doc4.jpeg';
+import doc5 from './doc5.jpeg';
+import doc6 from './doc6.jpeg';
+import doc7 from './doc7.jpeg';
+import doc8 from './doc8.jpeg';
+import doc9 from './doc9.jpeg';
+import doc10 from './doc10.jpeg';
 
 export const assets = {
     logo,
@@ -70,6 +81,7 @@ export const assets = {
     logo2,
     logo4,
     h1,
+    d3,
     basket_icon,
     header_img,
     search_icon,
@@ -356,3 +368,95 @@ export const food_list = [
         category: "Noodles"
     }
 ]
+export const doctor_list  = [
+    {
+        _id: "1",
+        name: "Dr. Lawrence Espinoza",
+        specialization: "Heart",
+        experience: "10yrs",
+        fees: "$100",
+        phone: "145234562",
+        image: doc1 
+    },
+    {
+        _id: "2",
+        name: "Dr. Emily Watson",
+        specialization: "Neurology",
+        experience: "8yrs",
+        fees: "$150",
+        phone: "145234563",
+        image:  doc2 
+    },
+    {
+        _id: "3",
+        name: "Dr. Michael Brown",
+        specialization: "Orthopedics",
+        experience: "12yrs",
+        fees: "$120",
+        phone: "145234564",
+        image:  doc3 
+    },
+    {
+        _id: "4",
+        name: "Dr. Sarah Johnson",
+        specialization: "Dermatology",
+        experience: "7yrs",
+        fees: "$90",
+        phone: "145234565",
+        image: doc4 
+    },
+    {
+        _id: "5",
+        name: "Dr. David Wilson",
+        specialization: "Pediatrics",
+        experience: "5yrs",
+        fees: "$80",
+        phone: "145234566",
+        image: doc5 
+    },
+    {
+        _id: "6",
+        name: "Dr. Anna Lee",
+        specialization: "Gynecology",
+        experience: "15yrs",
+        fees: "$110",
+        phone: "145234567",
+        image: doc6 
+    },
+    {
+        _id: "7",
+        name: "Dr. John Miller",
+        specialization: "Cardiology",
+        experience: "20yrs",
+        fees: "$200",
+        phone: "145234568",
+        image:  doc7 
+    },
+    {
+        _id: "8",
+        name: "Dr. Jessica Garcia",
+        specialization: "Oncology",
+        experience: "10yrs",
+        fees: "$180",
+        phone: "145234569",
+        image:  doc8 
+    },
+    {
+        _id: "9",
+        name: "Dr. Robert Martinez",
+        specialization: "Gastroenterology",
+        experience: "9yrs",
+        fees: "$130",
+        phone: "145234570",
+        image:  doc9 
+    },
+    {
+        _id: "10",
+        name: "Dr. Linda Rodriguez",
+        specialization: "Endocrinology",
+        experience: "11yrs",
+        fees: "$140",
+        phone: "145234571",
+        image: doc10 
+    }
+];
