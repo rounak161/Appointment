@@ -31,7 +31,7 @@
     width: 150px;  /* Fixed width */
     height: 150px; /* Fixed height */
     border-radius: 50%;
-    object-fit: cover; /* Ensure the image covers the area while maintaining aspect ratio */
+    object-fit: cover; /* Ensure the   covers the area while maintaining aspect ratio */
   }
   .inputs {
     display: flex;
