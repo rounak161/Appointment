@@ -44,7 +44,7 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 14px;
-    outline: none; /* Prevent default browser outline */
+    outline: none; /* Prevent  browser outline */
     border-color: #ccc; /* Set default border color */
   }
   
