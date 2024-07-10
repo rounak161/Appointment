@@ -1,0 +1,87 @@
+.profile-container {
+     height: 100vh;
+     width: 100%;
+     margin: 0 auto;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+  }
+  .profile {
+    background-color: #c5dabe;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 70%; /* Increase the width */
+    max-width: 800px; /* Optional: set a maximum width */
+  }
+  .profile h2{
+     color: rgb(44, 40, 40);
+     text-align: center;
+  }
+  .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  
+  .image img {
+    width: 150px;  /* Fixed width */
+    height: 150px; /* Fixed height */
+    border-radius: 50%;
+    object-fit: cover; /* Ensure the image covers the area while maintaining aspect ratio */
+  }
+  .inputs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .inputs input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none; /* Prevent default browser outline */
+    border-color: #ccc; /* Set default border color */
+  }
+  
+  .inputs input:focus {
+    border-color: #4CAF50; /* Set focus border color */
+    outline: none; /* Remove focus outline */
+  }
+  textarea {
+    resize: none;
+    height: 10vh;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none; /* Prevent default browser outline */
+    border-color: #ccc; /* Set default border color */
+  }
+  
+  textarea:focus {
+    border-color: #4CAF50; /* Set focus border color */
+    outline: none; /* Remove focus outline */
+  }
+  
+  .button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #45a049;
+  }
