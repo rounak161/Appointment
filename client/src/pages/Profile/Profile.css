@@ -67,7 +67,7 @@
   
   textarea:focus {
     border-color: #4CAF50; /* Set focus border color */
-    outline: none; /*   outline */
+    outline: none;
   }
   
   .button {
