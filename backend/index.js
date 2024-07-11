@@ -44,6 +44,6 @@ app.listen(port, () => console.log("Server has been started"));
   
 //   app.use("/auth", authController);
   
-//   const port = process.env.PORT || 5000;
+//   const port = process.env.PORT 
   
  
