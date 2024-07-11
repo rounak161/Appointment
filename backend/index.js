@@ -42,7 +42,7 @@ app.listen(port, () => console.log("Server has been started"));
 //     res.send('Welcome to the Travello backend service!');
 //   });
   
-//   app.use("/auth", 
+//   app. 
   
  
   
