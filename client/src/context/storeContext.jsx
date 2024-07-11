@@ -2,7 +2,8 @@
 
 import React, { createContext, useEffect, useState } from 'react';
  
-import { doctor_list} from "../assets/assets";
+ import { doctor_list} from "../assets/assets";
+ 
 export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
