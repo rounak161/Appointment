@@ -36,6 +36,16 @@ app.listen(port, () => console.log("Server has been started"));
 
 
  
+//  // Root route
+// app.get('/', (req, res) => {
+//   res.send('Welcome to the Travello backend service!');
+// });
+
+// app.use("/auth", authController);
+
+// const port = process.env.PORT || 5000;
+
+ 
  
   
  
