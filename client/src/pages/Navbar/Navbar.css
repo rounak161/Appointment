@@ -95,3 +95,26 @@ body {
   .navbar-menu li.active a {
   color: #1a1716; /* Example: style the link within active item */
 }
+
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.username {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.logout-button {
+  background: none;
+  border: none;
+  color: #1f5023;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: white;
+}

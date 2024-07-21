@@ -10,7 +10,7 @@
     box-shadow: 0px 0px 5px #00000015;
     transition: transform 0.3s, box-shadow 0.3s; /* Transition properties */
     animation: fadeIn 1s; /* Apply fadeIn animation */
-    background-color: rgb(174, 209, 174);
+    background-color: #e6f2e6;
     border-radius: 10px;
     cursor: pointer;
   }

@@ -9,6 +9,12 @@ import {Routes,Route} from 'react-router-dom'
 import Login from "./pages/Login/Login"
 import Register from "./pages/Register/Register"
 import Profile from "./pages/Profile/Profile"
+import Apply from "./pages/Apply/Apply"
+import Admin from "./pages/Admin/Admin"
+import Book from "./pages/Book/Book"
+import Apptments from "./pages/Apptments/Apptments"
+ 
+
 
 function App() {
    
@@ -24,6 +30,10 @@ function App() {
       <Route path='/login' element={<Login/>}/>
       <Route path='/register' element={<Register/>}/>
       <Route path='/profile' element={<Profile/>}/>
+      <Route path='/apply' element={<Apply/>}/>
+      <Route path='/admin' element={<Admin/>}/>
+      <Route path='/appointments' element={<Apptments/>}/>
+      <Route path='/book/:id' element={<Book/>}/>
      </Routes>
      <Footer/>
      <FooterTail/>
