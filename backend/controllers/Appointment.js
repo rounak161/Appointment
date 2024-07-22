@@ -85,15 +85,7 @@ appointmentController.delete('/delete/:id', async (req, res) => {
   }
 });
 
-///for paying the amount 
-
-appointmentController.post('/pay',async(req,res)=>{
-
-})
-
-
-
-// ///for paying the amount 
+ 
  
 
 
