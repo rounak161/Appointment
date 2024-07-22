@@ -2,6 +2,8 @@ const express = require('express');
 const Appointment = require('../models/Appointment');
 
 const appointmentController = express.Router();
+const Stripe = require('stripe');
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 // Create an appointment
 appointmentController.post('/create', async (req, res) => {
@@ -66,8 +68,34 @@ appointmentController.get('/get/:id', async (req, res) => {
 });
 
 
+ // Delete appointment by ID
+appointmentController.delete('/delete/:id', async (req, res) => {
+  const appointmentId = req.params.id;
+
+  try {
+    const deletedAppointment = await Appointment.findByIdAndDelete(appointmentId);
+
+    if (!deletedAppointment) {
+      return res.status(404).json({ message: 'Appointment not found' });
+    }
+
+    res.status(200).json({ message: 'Appointment deleted successfully' });
+  } catch (error) {
+    res.status(500).json({ message: 'Error deleting appointment', error });
+  }
+});
+
+///for paying the amount 
+
+appointmentController.post('/pay',async(req,res)=>{
+
+})
 
 
+
+// ///for paying the amount 
+
+// appointmentController.post('/pay',async(req,res)=>{
 
 
 

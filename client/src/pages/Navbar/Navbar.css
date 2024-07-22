@@ -11,13 +11,13 @@ body {
     height: 60px; /* Explicit height for the navbar using viewport height */
     background-color: #c5ddc6; /* Sets background color */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds a shadow */
-    z-index: 1000; /* Ensures the navbar is above other content */
+    z-index: 100; /* Ensures the navbar is above other content */
     padding: 0 1rem; /* Adjusted padding to not affect height */
     display: flex; /* Flexbox for layout */
     justify-content: space-between; /* Space between elements */
     align-items: center; /* Center items vertically */
     transition: all 0.3s ease; /* Smooth transition for any changes */
-    overflow: hidden; /* Ensure no overflow issues */
+    overflow: visible; /* Ensure no overflow issues */
     padding: 0 20px;
     margin: 0px auto;
  
@@ -117,4 +117,54 @@ body {
 
 .logout-button:hover {
   background-color: white;
+}
+
+
+/* ///////////////////////////////////// */
+
+/* Username link */
+.username {
+  position: relative; /* Position relative for dropdown positioning */
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 1000; /* Ensure dropdown is above navbar */
+}
+
+/* Dropdown menu */
+.dropdown {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 100%; /* Position below the link */
+  left: 0;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 150px;
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+/* Show dropdown on hover */
+.username:hover .dropdown {
+  display: block;
+}
+
+/* Dropdown links */
+.dropdown a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+}
+
+.dropdown a:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown a:last-child {
+  border-bottom: none; /* Remove border for the last item */
 }

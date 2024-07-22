@@ -13,6 +13,7 @@ import Apply from "./pages/Apply/Apply"
 import Admin from "./pages/Admin/Admin"
 import Book from "./pages/Book/Book"
 import Apptments from "./pages/Apptments/Apptments"
+import AdminAptments from "./pages/AdminAptments/AdminAptments"
  
 
 
@@ -34,6 +35,7 @@ function App() {
       <Route path='/admin' element={<Admin/>}/>
       <Route path='/appointments' element={<Apptments/>}/>
       <Route path='/book/:id' element={<Book/>}/>
+      <Route path='/admin/appointments' element={<AdminAptments/>}/>
      </Routes>
      <Footer/>
      <FooterTail/>

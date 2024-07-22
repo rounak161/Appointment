@@ -33,6 +33,31 @@ const Apptments = () => {
     }
   }, [userId]);
 
+
+  
+  const handleDelete = async (appointmentId) => {
+    try {
+      const response = await fetch(`http://localhost:5000/appointment/delete/${appointmentId}`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (response.ok) {
+        setData(data.filter(item => item._id !== appointmentId));
+      } else {
+        const errorData = await response.json();
+        console.error('Failed to delete appointment:', errorData.message || 'Unknown error');
+      }
+    } catch (error) {
+      console.error('Error deleting appointment:', error);
+    }
+  };
+
+
+
+
   return (
     <div className="apt-container">
       <h2>Your Appointments</h2>
@@ -45,10 +70,11 @@ const Apptments = () => {
               <p> <span>Date</span>: {item.date}</p>
               <p> <span>Time</span>: {item.time}</p>
               <p><span>Status</span>: {item.status}</p>
+              <button  onClick={()=>handleDelete(item._id)} className='color'>delete</button>
             </div>
           ))
         ) : (
-          <p>No appointments found.</p>
+          <p className='no-apt'>No appointments found.</p>
         )}
       </div>
     </div>

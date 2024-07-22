@@ -321,7 +321,14 @@ const Navbar = () => {
         {token && (
           <div className="user-info">
             {user?.isAdmin && (
-              <Link to="/admin" className="username">Admin</Link>
+              // <Link to="/admin" className="username">Admin</Link>
+              <Link to="/admin" className="username">
+                Admin
+                <div className="dropdown">
+                  <Link to="/admin">Doctors</Link>
+                  <Link to="/admin/appointments">Appointments</Link>
+                </div>
+              </Link>
             )}
             <span className="username">{user?.username}</span>
             <button className="logout-button" onClick={() => {

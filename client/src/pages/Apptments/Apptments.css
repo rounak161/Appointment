@@ -4,13 +4,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
- 
   height: 100vh;
+}
+
+.apt-container h2 {
+  font-size: 40px;
+  font-weight: 600;
+  color: rgb(76, 141, 76);
+  margin-bottom: 20px;
 }
 
 .apt-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive columns */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   width: 100%;
   max-width: 1200px;
@@ -18,18 +24,23 @@
 }
 
 .appointment-item {
-  background-color: #ffffff; /* White background for better contrast */
+  background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px; /* Increased padding for better spacing */
+  padding: 20px;
   text-align: left;
   transition: transform 0.2s, box-shadow 0.2s;
-  border: 1px solid #e0e0e0; /* Light border for a subtle definition */
+  border: 1px solid #e0e0e0;
+  height: 250px; /* Fixed height for consistency */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box; /* Include padding and border in total size */
 }
 
 .appointment-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .appointment-item p {
@@ -40,8 +51,33 @@
 
 .appointment-item p span {
   font-weight: bold;
-  color: #004d40; /* Dark green color for labels */
+  color: #004d40;
 }
 
+.appointment-item button {
+  color: white;
+  background-color: rgb(228, 54, 54);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s;
+  width: 100%;
+  margin-top: auto; /* Push button to the bottom */
+}
 
- 
+.appointment-item button:hover {
+  background-color: rgb(192, 72, 72);
+}
+
+.no-apt {
+  font-size: 18px;
+  color: #757575;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

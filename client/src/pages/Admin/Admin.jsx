@@ -248,6 +248,7 @@ const Admin = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const { updateDoctor } = useContext(StoreContext);
+   
 
   useEffect(() => {
     const fetchAppliedDoctors = async () => {
@@ -306,6 +307,8 @@ const Admin = () => {
     }
   };
 
+   
+
   return (
     <div className="admin-container">
       <div className="admin-wrapper">
@@ -339,6 +342,7 @@ const Admin = () => {
             </ul>
           )}
         </div>
+         
       </div>
     </div>
   );
