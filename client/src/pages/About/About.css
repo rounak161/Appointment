@@ -1,0 +1,46 @@
+.about-container {
+    max-width:80%;
+    margin: auto;
+    padding: 20px;
+    background-color: #b9d6b4;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-container h2 {
+    color: #333;
+    font-size:40px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     
+  }
+  
+  .about-image {
+    flex: 1;
+    margin-right: 20px;
+   
+  }
+  
+  .about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .about-description {
+    flex: 2;
+     
+  }
+  
+  .about-description p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  

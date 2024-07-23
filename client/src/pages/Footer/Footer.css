@@ -1,0 +1,53 @@
+.footer {
+   padding: 50px 200px;
+   margin: 100px auto;
+   text-align: center;
+   display: flex;
+   justify-content: space-between;
+   background-color: rgb(169, 228, 169);
+   width: 100%;
+   margin-bottom: 0px;
+ }
+ 
+ .footer-left, .footer-right {
+   list-style: none;
+   text-align: start;
+   width: 50%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center; /* Centers the content vertically */
+   margin-left: 20%;
+ }
+ 
+  .footer-left h2{
+   margin-left: 21%;
+   font-weight: 600;
+  }
+  
+.footer-left li, .footer-right li {
+   margin: 1px 1px;
+   padding: 5px;
+   font-size: 17px;
+   color: rgb(97, 92, 92);
+   cursor:pointer,
+ }
+ .footer-right {
+   margin-bottom: 138px;
+   gap: 30px;
+  }
+  .footer-right h2{
+   font-weight: 600;
+  }
+  
+.links {
+   display: flex;
+   gap: 1rem; /* Adds space between the images */
+ }
+
+ .links img {
+   z-index: 100;
+   background-color: transparent; /* Ensures the background is transparent */
+   border: none; /* Removes any default border */
+   cursor: pointer;
+ }
+ 
