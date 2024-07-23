@@ -11,6 +11,7 @@ const appointmentSchema = new mongoose.Schema({
     enum: ['false', 'true'],
     default: 'false',
   },
+  amount: { type: Number }
 });
 
 module.exports = mongoose.model('Appointment', appointmentSchema);

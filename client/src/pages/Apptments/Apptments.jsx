@@ -70,6 +70,8 @@ const Apptments = () => {
               <p> <span>Date</span>: {item.date}</p>
               <p> <span>Time</span>: {item.time}</p>
               <p><span>Status</span>: {item.status}</p>
+              <p><span>Payment</span>: {item.payment === 'true' ? 'Done' : 'Not Done'}
+              </p>
               <button  onClick={()=>handleDelete(item._id)} className='color'>delete</button>
             </div>
           ))

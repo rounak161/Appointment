@@ -1,10 +1,10 @@
+require('dotenv').config();
 const express = require('express');
 const Appointment = require('../models/Appointment');
-
-const appointmentController = express.Router();
 const Stripe = require('stripe');
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
-
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY); // Create Stripe instance after loading .env
+const appointmentController = express.Router();
+const Doctor = require('../models/Doctor'); // Import Doctor model
 // Create an appointment
 appointmentController.post('/create', async (req, res) => {
   try {
@@ -85,11 +85,116 @@ appointmentController.delete('/delete/:id', async (req, res) => {
   }
 });
 
+
+////new controller for booking 
+
+// appointmentController.post('/book',async (req, res) => {
+//   const frontend_url = "http://localhost:5173";
+//   try {
+//     const newAppointment = new Appointment({
+//       doctorId: req.body.doctorId,
+//       patientId: req.body.patientId,
+//       date: req.body.date,
+//       time: req.body.time,
+//     });
+//     await newAppointment.save();
+
+//     const line_items = [{
+//       price_data: {
+//         currency: "inr",
+//         product_data: {
+//           name: `Appointment with Doctor ID: ${req.body.doctorId}`,
+//         },
+//         unit_amount: req.body.amount * 100, // Amount in paise
+//       },
+//       quantity: 1,
+//     }];
+
+//     const session = await stripe.checkout.sessions.create({
+//       line_items: line_items,
+//       mode: 'payment',
+//       success_url: `${frontend_url}/verify?success=true&appointmentId=${newAppointment._id}`,
+//       cancel_url: `${frontend_url}/verify?success=false&appointmentId=${newAppointment._id}`,
+//     });
+//     res.json({ success: true, session_url: session.url });
+
+//   } catch (error) {
+//     console.log(error);
+//     res.json({ success: false, message: "Error creating appointment" });
+//   }
+// });
+
+
+///booking and appointment  through stripe payment   ......
+appointmentController.post('/book', async (req, res) => {
+  const frontend_url = "http://localhost:5173";
+  try {
+    // Fetch doctor details
+    const doctor = await Doctor.findById(req.body.doctorId);
+
+    if (!doctor) {
+      return res.status(404).json({ message: "Doctor not found" });
+    }
+
+    const newAppointment = new Appointment({
+      doctorId: req.body.doctorId,
+      patientId: req.body.patientId,
+      date: req.body.date,
+      time: req.body.time,
+    });
+    await newAppointment.save();
+
+    const line_items = [{
+      price_data: {
+        currency: "inr",
+        product_data: {
+          name: `Appointment with Dr. ${doctor.name}`,
+        },
+        unit_amount: doctor.fees * 100, // Convert fees to paise
+      },
+      quantity: 1,
+    }];
+
+    const session = await stripe.checkout.sessions.create({
+      line_items: line_items,
+      mode: 'payment',
+      success_url: `${frontend_url}/verify?success=true&appointmentId=${newAppointment._id}`,
+      cancel_url: `${frontend_url}/verify?success=false&appointmentId=${newAppointment._id}`,
+    });
+
+    res.json({ success: true, session_url: session.url });
+
+  } catch (error) {
+    console.log(error);
+    res.json({ success: false, message: "Error creating appointment" });
+  }
+});
  
+
+
+ //verifying logic  means if payment is done  set payment true
+ appointmentController.post('/verify', async (req, res) => {
+  const { success, appointmentId } = req.body;
+
+  if (success === 'true') {
+    try {
+      const appointment = await Appointment.findById(appointmentId);
+      if (appointment) {
+        appointment.payment = true; // Use a boolean
+        await appointment.save();
+        res.json({ message: 'Payment verified successfully' });
+      } else {
+        res.status(404).json({ message: 'Appointment not found' });
+      }
+    } catch (error) {
+      console.log(error);
+      res.status(500).json({ message: 'Error verifying payment' });
+    }
+  } else {
+    res.json({ message: 'Payment verification failed' });
+  }
+});
  
-
-
-
 
 
 

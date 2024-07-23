@@ -55,6 +55,7 @@ const doctorController = require("./controllers/doctorControllers");
 const uploadController = require("./controllers/uploadController");
 const appointmentController = require("./controllers/Appointment");
 require('dotenv').config();
+ 
 
 const app = express();
 

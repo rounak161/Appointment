@@ -14,6 +14,7 @@ import Admin from "./pages/Admin/Admin"
 import Book from "./pages/Book/Book"
 import Apptments from "./pages/Apptments/Apptments"
 import AdminAptments from "./pages/AdminAptments/AdminAptments"
+import Verify from "./pages/Verify/Verify"
  
 
 
@@ -36,6 +37,7 @@ function App() {
       <Route path='/appointments' element={<Apptments/>}/>
       <Route path='/book/:id' element={<Book/>}/>
       <Route path='/admin/appointments' element={<AdminAptments/>}/>
+      <Route path='/verify' element={<Verify/>}/>
      </Routes>
      <Footer/>
      <FooterTail/>
