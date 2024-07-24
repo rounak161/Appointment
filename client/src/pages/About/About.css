@@ -1,46 +1,115 @@
+/* Base Styles */
 .about-container {
-    max-width:80%;
-    margin: auto;
-    padding: 20px;
-    background-color: #b9d6b4;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 80%;
+  margin: auto;
+  padding: 20px;
+  /* background-color: #cbddc8;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+.about-container h2 {
+  color: #333;
+  font-size: 50px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+}
+
+.about-image {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.about-description {
+  flex: 2;
+}
+
+.about-description p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .about-container {
+    padding: 15px;
   }
-  
+
   .about-container h2 {
-    color: #333;
-    font-size:40px;
-    margin-bottom: 40px;
+    font-size: 40px;
+  }
+
+  .about-image {
+    margin-right: 15px;
+  }
+
+  .about-description p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  .about-container {
+    padding: 10px;
+  }
+
+  .about-container h2 {
+    font-size: 35px;
+  }
+
+  .about-content {
+    flex-direction: column;
     text-align: center;
   }
-  
-  .about-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-     
-  }
-  
+
   .about-image {
-    flex: 1;
-    margin-right: 20px;
-   
+    margin-right: 0;
+    margin-bottom: 20px;
   }
-  
-  .about-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-  
-  .about-description {
-    flex: 2;
-     
-  }
-  
+
   .about-description p {
-    color: #555;
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 14px;
   }
-  
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    padding: 10px;
+  }
+
+  .about-container h2 {
+    font-size: 30px;
+  }
+
+  .about-description p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-container {
+    padding: 5px;
+  }
+
+  .about-container h2 {
+    font-size: 24px;
+  }
+
+  .about-description p {
+    font-size: 12px;
+  }
+}

@@ -298,7 +298,7 @@ const Navbar = () => {
               >
                 <span>Apply for Doctors</span>
               </li>
-              <li
+              {/* <li
                 onClick={() => {
                   navigate('/contact');
                   setMenu('contact');
@@ -306,7 +306,7 @@ const Navbar = () => {
                 className={menu === 'contact' ? 'active' : ''}
               >
                 <span>Contact Us</span>
-              </li>
+              </li> */}
             </>
           )}
         </ul>

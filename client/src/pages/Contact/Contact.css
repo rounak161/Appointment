@@ -1,3 +1,4 @@
+/* Container for contact form */
 .contact-us-container {
   padding: 50px 20px; /* Adjusted padding for responsiveness */
   margin: 100px auto; /* Centered the container vertically */
@@ -5,19 +6,22 @@
   max-width: 800px; /* Added max-width to limit container width */
 }
 
+/* Heading styling */
 .contact-us-container h2 {
-  font-size: 50px;
-  font-weight: 600; /* Corrected typo: font-size to font-weight */
+  font-size: 2.5rem; /* Responsive font size */
+  font-weight: 600;
   color: rgb(65, 62, 62);
   margin-bottom: 20px;
 }
 
+/* Flex container for form elements */
 .contact-us {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* Styling for inputs and textarea */
 .contact-us input,
 .contact-us textarea {
   margin: 20px 0; /* Adjusted margin for inputs and textarea */
@@ -25,43 +29,64 @@
   padding: 10px;
   border: none;
   font-weight: 600;
-  border: none;
   box-shadow: 0px 0px 5px #00000015;
   transition: box-shadow 0.3s ease;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 1rem; /* Responsive font size */
 }
 
+/* Focus state for inputs and textarea */
 .contact-us input:focus,
 .contact-us textarea:focus {
   outline: none;
-  box-shadow: none;
+  box-shadow: 0px 0px 5px #66bb6a; /* Green focus outline */
   border-color: transparent; /* Adjust as needed */
 }
 
+/* Styling for textarea */
 .contact-us textarea {
   height: 150px;
-  resize: none;
+  resize: none; /* Prevent resizing */
 }
 
+/* Styling for button */
 .contact-us button {
   color: white;
-    background-color: rgb(100, 194, 100);
-    box-shadow: 0px 0px 5px #00000015;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: box-shadow 0.3s ease;
-    margin: 20px 0;
-    width: calc(100% - 40px);
-    outline: none;
+  background-color: rgb(100, 194, 100);
+  box-shadow: 0px 0px 5px #00000015;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin: 20px 0;
+  width: calc(100% - 40px);
+  font-size: 1rem; /* Responsive font size */
 }
 
+/* Button hover effect */
 .contact-us button:hover {
-  /* box-shadow: 0px 0px 10px #00000030;
-  background-color: rgb(59, 165, 59); */
-  outline: none;
-  box-shadow: none;
-  border-color: transparent; /* Adjust as needed */
+  background-color: rgb(59, 165, 59); /* Darker green on hover */
+  box-shadow: 0px 0px 10px #00000030;
+}
+
+/* Status message styling */
+.status-message {
+  text-align: center;
+  margin-top: 10px;
+  color: #333; /* Default color for status messages */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .contact-us-container {
+    padding: 20px; /* Adjust padding for smaller screens */
+    margin: 50px auto; /* Adjust margin for smaller screens */
+  }
+
+  .contact-us input,
+  .contact-us textarea,
+  .contact-us button {
+    width: 100%; /* Full width for smaller screens */
+  }
 }

@@ -1,20 +1,13 @@
-
-.counter {
-  border: none; /* Ensure no default border */
-}
-
-input:focus {
-  outline: none; /* Remove input focus outline */
-  box-shadow: none;
-}
-
+/* Reset margin, padding, and box-sizing for all elements */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Ensure consistent sizing */
+  box-sizing: border-box;
 }
 
+/* Counter styling */
 .counter {
+  border: none;
   font-size: 36px;
   font-weight: bold;
   text-align: center;
@@ -22,47 +15,93 @@ input:focus {
   width: 220px;
   height: 220px;
   border-radius: 50%;
-  background-color: #edf3f0;
+  background-color: white; /* Background color */
+  color: #4caf50; /* Text color */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-  border: none; /* Ensure no default border */
 }
 
 .counter:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  border-color: rgb(79, 209, 79); 
+  border: 4px solid #4caf50; /* Thicker green border color on hover */
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-
+/* Count container styling */
 .count-container {
-  padding: 50px 200px;
-  margin: 200px auto;
+  padding: 50px 20px; /* Adjusted padding for responsiveness */
+  margin: 100px auto; /* Centered container */
   text-align: center;
   display: flex;
-  justify-content:space-around;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  justify-content: center; /* Center items horizontally */
   align-items: center;
-  margin-left: 127px;
+  gap: 20px; /* Space between items */
 }
 
+/* Count and label styling */
 .count {
   font-size: 36px;
   font-weight: bold;
-  color: rgb(33, 182, 125);
+  color: rgb(33, 182, 125); /* Text color */
 }
 
 .label {
   font-size: 20px;
-  color: #666;
-  margin-top: 10px;
+  color: #666; /* Neutral color for labels */
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .counter {
+    font-size: 28px; /* Adjust font size for medium screens */
+    width: 180px;
+    height: 180px;
+  }
+  
+  .count-container {
+    padding: 40px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .counter {
+    font-size: 24px; /* Adjust font size for small screens */
+    width: 150px;
+    height: 150px;
+  }
+
+  .count-container {
+    padding: 30px 5px;
+    flex-direction: column; /* Stack items vertically on very small screens */
+    align-items: center;
+  }
+
+  .count {
+    font-size: 28px; /* Adjust font size for small screens */
+  }
+
+  .label {
+    font-size: 18px; /* Adjust label font size for small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .counter {
+    font-size: 20px; /* Further adjust font size for extra small screens */
+    width: 120px;
+    height: 120px;
+  }
+
+  .count {
+    font-size: 24px; /* Further adjust font size for extra small screens */
+  }
+
+  .label {
+    font-size: 16px; /* Further adjust label font size for extra small screens */
+  }
 }

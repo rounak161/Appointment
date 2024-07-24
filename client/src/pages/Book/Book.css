@@ -1,66 +1,82 @@
+/* Container for the booking form */
 .book-form {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 289px auto;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 100px; /* Adjusted margin-top for better spacing */
+}
+
+/* Style for form groups */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Label styling */
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Input field styling */
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Button container styling */
+.bbtn {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  gap: 10px; /* Space between buttons */
+}
+
+/* Payment button styling */
+.payment-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Payment button hover effect */
+.payment-button:hover {
+  background-color: #45a049;
+}
+
+/* Submit button styling */
+.submit-button {
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Submit button hover effect */
+.submit-button:hover {
+  background-color: #007bb5;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .book-form {
+    margin: 20px; /* Add some margin for smaller screens */
+    padding: 15px; /* Reduced padding for smaller screens */
   }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  .form-group input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .bbtn {
-    display: flex;
-    flex-direction: column; /* Stack buttons vertically */
-    gap: 10px; /* Space between buttons */
-  }
-  
-  .payment-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    text-align: center;
-    display: block;
-    font-size: 16px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .payment-button:hover {
-    background-color: #45a049;
-  }
-  
-  .submit-button {
-    background-color: #008CBA;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    text-align: center;
-    display: block;
-    font-size: 16px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .submit-button:hover {
-    background-color: #007bb5;
-  }
-  
+}
