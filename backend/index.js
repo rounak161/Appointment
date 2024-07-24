@@ -54,6 +54,7 @@ const authController = require("./controllers/authControllers");
 const doctorController = require("./controllers/doctorControllers");
 const uploadController = require("./controllers/uploadController");
 const appointmentController = require("./controllers/Appointment");
+const NotificationController = require("./controllers/NotificationController");
 require('dotenv').config();
  
 
@@ -79,6 +80,7 @@ app.use("/auth", authController);
 app.use("/doctor", doctorController);
 app.use('/upload', uploadController);
 app.use('/appointment',appointmentController);
+app.use('/notify',NotificationController);
 // Start server
 const port = process.env.PORT || 5000;
 app.listen(port, () => console.log(`Server has been started on port ${port}`));

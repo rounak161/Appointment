@@ -28,18 +28,25 @@ appointmentController.get('/all', async (req, res) => {
 });
 
 // Update appointment status
-appointmentController.put('/:id', async (req, res) => {
+appointmentController.put('/update', async (req, res) => {
   try {
-    const { status } = req.body;
-    const appointment = await Appointment.findByIdAndUpdate(req.params.id, { status }, { new: true });
+    const { id } = req.body; // Get id from req.body
+    const appointment = await Appointment.findById(id);
+    
     if (!appointment) {
       return res.status(404).json({ error: 'Appointment not found' });
     }
+    
+    // Update status to 'confirmed'
+    appointment.status = 'confirmed';
+    await appointment.save();
+    
     res.status(200).json(appointment);
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
 });
+
 
 
 

@@ -1,0 +1,47 @@
+.cohg{
+ height: 100vh;
+ width: 100%;padding:200px;
+}
+.notification-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0fff4; /* Light green background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .notification-container ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .notification-container li {
+    background-color: #e6ffe6; /* Slightly darker green for each notification */
+    border: 1px solid #b3ffb3;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .notification-container li:hover {
+    background-color: #ccffcc; /* Change on hover */
+  }
+  
+  .notification-container p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .notification-container span {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 12px;
+    color: #fff;
+    background-color: #66cc66; /* Dark green for status */
+    border-radius: 12px;
+  }
+  
