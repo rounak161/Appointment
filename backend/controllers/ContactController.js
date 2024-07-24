@@ -40,8 +40,4 @@ const Contact = require('../models/Contact');
 
 
 
-
-// // Get all contact messages (optional)
-// getAllContactMessages.get() async (req, res) => {
-//   try {
  
