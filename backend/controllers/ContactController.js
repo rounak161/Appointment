@@ -44,10 +44,4 @@ const Contact = require('../models/Contact');
 // // Get all contact messages (optional)
 // getAllContactMessages.get() async (req, res) => {
 //   try {
-//     const contacts = await Contact.find();
-//     res.status(200).json(contacts);
-//   } catch (error) {
-//     console.error(error);
-//     res.status(500).json({ message: 'Error fetching contact messages', error });
-//   }
-// };
+ 
