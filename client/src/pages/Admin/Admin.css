@@ -113,3 +113,8 @@
     object-fit: cover; /* Ensures the image covers the circle */
   }
   
+/* 
+  .image-1 img {
+    width: 100%;
+    height: 100%;
+    
