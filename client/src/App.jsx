@@ -16,6 +16,7 @@ import Apptments from "./pages/Apptments/Apptments"
 import AdminAptments from "./pages/AdminAptments/AdminAptments"
 import Verify from "./pages/Verify/Verify"
 import Notification from "./pages/Notification/Notification"
+import ChatBot from "./pages/Chatbot/ChatBot"
  
 function App() {
    
@@ -38,6 +39,7 @@ function App() {
       <Route path='/admin/appointments' element={<AdminAptments/>}/>
       <Route path='/verify' element={<Verify/>}/>
       <Route path='/notification' element={<Notification/>}/>
+      <Route path='/bot' element={<ChatBot/>}/>
      </Routes>
      <Footer/>
      <FooterTail/>

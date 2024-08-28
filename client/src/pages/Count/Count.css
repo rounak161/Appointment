@@ -1,4 +1,4 @@
-/* Reset margin, padding, and box-sizing for all elements */
+Reset margin, padding, and box-sizing for all elements
 * {
   margin: 0;
   padding: 0;
@@ -105,3 +105,13 @@
     font-size: 16px; /* Further adjust label font size for extra small screens */
   }
 }
+
+/* 
+.count {
+  font-size: 24px; /* Further adjust font size for extra small screens */
+}
+
+.label {
+  font-size: 16px; /* Further adjust label font size for extra small screens */
+}
+} */

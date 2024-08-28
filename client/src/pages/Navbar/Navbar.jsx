@@ -298,6 +298,16 @@ const Navbar = () => {
               >
                 <span>Apply for Doctors</span>
               </li>
+              <li
+                onClick={() => {
+                  navigate('/bot');
+                  setMenu('bot');
+                }}
+                className={menu === 'bot' ? 'active' : ''}
+              >
+                <span>Chatbot</span>
+              </li>
+
               {/* <li
                 onClick={() => {
                   navigate('/contact');
